@@ -23,7 +23,10 @@ const App = () => {
   );
 
   const displayedTasks = useMemo(
-    () => filteredTasks.filter((task) => timeFilter === "all" || task.type === timeFilter),
+    () =>
+      filteredTasks.filter(
+        (task) => timeFilter === "all" || task.type === timeFilter
+      ),
     [filteredTasks, timeFilter]
   );
 
